@@ -1,4 +1,4 @@
-geobricks_ftp_manager
-=====================
+Geobricks FTP Manager
+======================
 
-Geobricks FTP manager core functionalities.
+Geobricks ftp manager.
