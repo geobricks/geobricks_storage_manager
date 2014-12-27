@@ -9,10 +9,10 @@ setup(
     packages=find_packages(),
     license='LICENSE.txt',
     long_description=open('README.md').read(),
-    description='Geobricks ftp manager.',
+    description='Geobricks FTP manager.',
     install_requires=[
-        'flask',
+        'GeobricksCommon',
     ],
-    url='http://pypi.python.org/pypi/GeobricksDataManager/',
+    url='http://pypi.python.org/pypi/GeobricksFTPManager/',
     keywords=['geobricks', 'metadata', 'geoserver', 'd3s']
 )

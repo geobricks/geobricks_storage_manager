@@ -6,17 +6,14 @@ config = {
 
         # FTP Configuration
         "ftp": {
-            "fenix": {
-                "url": "fenix.fao.org",
-                "user": "fenix",
-                "password": "Fenix2014"
-            }
-
+            "url": "fenix.fao.org",
+            "user": "fenix",
+            "password": "Fenix2014"
         },
 
         # Folders
         "folders": {
             "ftp": "/work/fenix_gis/storage/test/",
-        },
+        }
     }
 }
