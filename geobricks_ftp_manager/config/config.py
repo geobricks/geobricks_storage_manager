@@ -5,15 +5,15 @@ config = {
     "settings": {
 
         # FTP Configuration
-        "ftp": {
-            "url": "fenix.fao.org",
-            "user": "fenix",
-            "password": "Fenix2014"
+        "server": {
+            "url": "localhsot",
+            "user": "user",
+            "password": "password"
         },
 
         # Folders
         "folders": {
-            "ftp": "/work/fenix_gis/storage/test/",
+            "storage": "/storage/test/",
         }
     }
 }
