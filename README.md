@@ -1,4 +1,4 @@
-Geobricks FTP Manager
+Geobricks Storage Manager
 ======================
 
-Geobricks ftp manager.
+Geobricks storage manager.
