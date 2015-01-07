@@ -4,7 +4,7 @@ from geobricks_common.core.log import logger
 log = logger(__file__)
 
 
-class FTPManager():
+class StorageManager():
 
     def __init__(self, config):
         self.config = config["settings"]
@@ -16,8 +16,8 @@ class FTPManager():
         self._publish_to_ftp(folder_path, "vector")
 
     def _publish_to_ftp(self, input_path, layer_type):
-        folder_ftp = self.config["folders"]["ftp"] + layer_type
-        ftp = self.config["ftp"]
+        folder_server = self.config["folders"]["storage"] + layer_type
+        server = self.config["server"]
 
         subprocess.call(['ls', '-1'], shell=True)
         args = [
@@ -26,7 +26,7 @@ class FTPManager():
             'rsync',
             '-azP',
             input_path,
-            ftp["user"] + '@' + ftp["url"] + ":" + folder_ftp
+            server["user"] + '@' + server["url"] + ":" + folder_server
         ]
 
         proc = subprocess.Popen(args,
