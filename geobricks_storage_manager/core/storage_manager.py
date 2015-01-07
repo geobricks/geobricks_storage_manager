@@ -38,5 +38,5 @@ class StorageManager():
         log.info(repr(stdout_value))
         log.info(repr(stderr_value))
 
-ftp_manager = FTPManager()
-ftp_manager.publish_raster_to_ftp("/home/vortex/Desktop/LAYERS/processing/test/", "fenix")
+# storage_manager = StorageManager()
+# storage_manager.publish_raster_to_ftp("/home/vortex/Desktop/LAYERS/processing/test/", "fenix")
