@@ -9,20 +9,20 @@ class StorageManager():
     def __init__(self, config):
         self.config = config["settings"]
 
-    def publish_raster_to_ftp(self, folder_path):
-        self._publish_to_ftp(folder_path, "raster")
+    def publish_raster_to_storage(self, folder_path):
+        self._publish_to_storage(folder_path, "raster")
 
-    def publish_vector_to_ftp(self, folder_path):
-        self._publish_to_ftp(folder_path, "vector")
+    def publish_vector_to_storage(self, folder_path):
+        self._publish_to_storage(folder_path, "vector")
 
-    def _publish_to_ftp(self, input_path, layer_type):
+    def _publish_to_storage(self, input_path, layer_type):
         folder_server = self.config["folders"]["storage"] + layer_type
         server = self.config["server"]
 
         subprocess.call(['ls', '-1'], shell=True)
         args = [
             'sshpass',
-            '-p', ftp["password"],
+            '-p', server["password"],
             'rsync',
             '-azP',
             input_path,
